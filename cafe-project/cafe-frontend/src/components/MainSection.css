@@ -1,0 +1,9 @@
+.main-container {
+  max-width: 1300px;
+  margin: 1rem auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 15px solid #F9ECD6;
+  background: #F9ECD6;
+}

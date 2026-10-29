@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тест связи</title>
+</head>
+<body style="padding: 20px; font-family: Arial;">
+    <h1>🔗 Тест связи фронтенда и бэкенда</h1>
+    
+    <button onclick="testConnection()" style="padding: 10px 20px; font-size: 16px;">
+        Проверить связь с бэкендом
+    </button>
+    
+    <div id="result" style="margin-top: 20px; padding: 15px; border: 1px solid #ccc;"></div>
+    
+    <script>
+        async function testConnection() {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '<p>⏳ Проверяю соединение...</p>';
+            
+            try {
+                // Пробуем получить данные с бэкенда
+                const response = await fetch('http://localhost:8080/api/products');
+                
+                if (response.ok) {
+                    const products = await response.json();
+                    resultDiv.innerHTML = `
+                        <h3 style="color: green;">✅ Связь работает!</h3>
+                        <p>Получено товаров: ${products.length}</p>
+                        <div style="max-height: 300px; overflow-y: auto; border: 1px solid #eee; padding: 10px;">
+                            <pre>${JSON.stringify(products, null, 2)}</pre>
+                        </div>
+                    `;
+                } else {
+                    resultDiv.innerHTML = `
+                        <h3 style="color: red;">❌ Ошибка ${response.status}</h3>
+                        <p>${await response.text()}</p>
+                    `;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `
+                    <h3 style="color: red;">❌ Ошибка сети</h3>
+                    <p>${error.message}</p>
+                    <p>Возможные причины:</p>
+                    <ol>
+                        <li>Бэкенд не запущен (localhost:8080)</li>
+                        <li>Проблема с CORS</li>
+                        <li>Брандмауэр блокирует соединение</li>
+                    </ol>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>

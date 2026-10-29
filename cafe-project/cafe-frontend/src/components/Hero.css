@@ -1,0 +1,123 @@
+.hero-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 35vh; 
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  
+  max-width: none;
+}
+
+.hero-content {
+  text-align: center; 
+  width: 100%;
+  max-width: none;
+  padding: 2rem;
+  padding-bottom: 1rem;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-end;
+  gap: 0;
+  width: 100%;
+}
+
+.hero-subtitle {
+  font-family: 'Afacad', sans-serif;
+  font-size: 3rem !important;
+  font-weight: 600;
+  color: #F9ECD6;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  margin-left: 8.8rem;
+  text-align: left;
+  width: 100%;
+  align-self: flex-start; 
+}
+
+.hero-title {
+  font-family: 'Afacad', sans-serif;
+  font-size: 15rem !important;
+  font-weight: 900;
+  color: #F9ECD6;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 0.5;
+  letter-spacing: 0.17em;
+  width: 100%;
+  margin-bottom: 0 !important;
+  margin-left: 16rem;
+  text-align: left;
+}
+
+@media (max-width: 1200px) {
+  .hero-section {
+    margin: 1.5rem;
+    border-width: 12px;
+  }
+  
+  .hero-subtitle {
+    font-size: 3rem !important;;
+    margin-bottom: 1.1rem;
+    margin-left: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 13rem !important;
+    margin-left: 0.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin: 1rem;
+    border-width: 10px;
+    border-radius: 15px;
+    min-height: 25vh;
+  }
+  
+  .hero-subtitle {
+    font-size: 3rem !important;;
+    letter-spacing: 0.2em;
+    margin-bottom: 0.2rem;
+  }
+  
+  .hero-title {
+    font-size: 10rem !important;;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    margin: 0.5rem;
+    border-width: 8px;
+    border-radius: 12px;
+    min-height: 20vh;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.5rem;
+    letter-spacing: 0.15em;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .hero-content {
+    padding: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}

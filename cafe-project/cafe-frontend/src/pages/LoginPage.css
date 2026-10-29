@@ -1,0 +1,195 @@
+.login-page {
+  min-height: 100vh;
+  background: #F9ECD6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.login-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  background:rgb(255, 248, 241);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-left {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.login-content {
+  width: 100%;
+}
+
+.login-content h1 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #401B00;
+  margin-bottom: 0.5rem;
+}
+
+.login-content > p {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.login-form {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-family: 'Afacad', sans-serif;
+  font-weight: 600;
+  color: #401B00;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #E8D9C0;
+  border-radius: 10px;
+  font-family: 'Afacad', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #F9ECD6;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #8B7355;
+  background: white;
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+  background: #FDF2F2;
+}
+
+.error-text {
+  color: #e74c3c;
+  font-family: 'Afacad', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+.login-btn {
+  width: 100%;
+  background: #8B7355;
+  color: white;
+  border: none;
+  padding: 1.2rem;
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.login-btn:hover {
+  background: #7A6348;
+  transform: translateY(-2px);
+}
+
+.login-links {
+  text-align: center;
+}
+
+.login-links p {
+  font-family: 'Afacad', sans-serif;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.login-links a {
+  color: #8B7355;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+  color: #401B00;
+}
+
+.forgot-password {
+  font-size: 0.9rem;
+}
+
+.login-right {
+  position: relative;
+}
+
+.login-image {
+  height: 100%;
+  min-height: 500px;
+  background: linear-gradient(135deg, #8B7355 0%, #401B00 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-overlay {
+  text-align: center;
+  color: white;
+  z-index: 2;
+  position: relative;
+}
+
+.image-overlay h2 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.image-overlay p {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .login-container {
+    grid-template-columns: 1fr;
+    margin: 1rem;
+  }
+  
+  .login-left {
+    padding: 2rem;
+  }
+  
+  .login-right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-left {
+    padding: 1.5rem;
+  }
+  
+  .login-content h1 {
+    font-size: 2rem;
+  }
+}

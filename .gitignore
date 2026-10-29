@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Node / React
+node_modules/
+build/
+.env
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Java / Maven
+target/
+HELP.md
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/

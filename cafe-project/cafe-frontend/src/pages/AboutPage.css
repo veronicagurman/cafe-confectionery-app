@@ -1,0 +1,226 @@
+.about-page {
+  min-height: 100vh;
+  background: #F9ECD6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-hero {
+  background: #401B00;
+  color: #F9ECD6;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-content p {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.3rem;
+  opacity: 0.9;
+  letter-spacing: 0.05em;
+}
+
+.about-story {
+  padding: 5rem 0;
+  background: #F9ECD6;
+}
+
+.story-content h2 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 2.8rem;
+  color: #401B00;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.story-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-text p {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #5a4a3a;
+  margin-bottom: 2rem;
+}
+
+.about-principles {
+  padding: 5rem 0;
+  background: rgba(139, 115, 85, 0.05);
+}
+
+.about-principles h2 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 2.8rem;
+  color: #401B00;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.principle-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #F9ECD6;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+}
+
+.principle-icon {
+  width: 80px;
+  height: 80px;
+  background: #401B00;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  position: relative;  
+}
+
+.principle-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 2px;
+  background: #F9ECD6;
+}
+
+.principle-card h3 {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.4rem;
+  color: #401B00;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.principle-card p {
+  font-family: 'Afacad', sans-serif;
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.about-team {
+  padding: 5rem 0;
+  background: #F9ECD6;
+}
+
+.about-team h2 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 2.8rem;
+  color: #401B00;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-weight: 600;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  background: #E8D9C0;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+  border: 3px solid #8B7355;
+}
+
+.team-member h3 {
+  font-family: 'Afacad', sans-serif;
+  font-size: 1.3rem;
+  color: #401B00;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.team-member p {
+  font-family: 'Afacad', sans-serif;
+  color: #8B7355;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  
+  .about-story h2,
+  .about-principles h2,
+  .about-team h2 {
+    font-size: 2.2rem;
+  }
+  
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-hero {
+    padding: 4rem 0;
+  }
+  
+  .about-story,
+  .about-principles,
+  .about-team {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .principle-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .member-photo {
+    width: 120px;
+    height: 120px;
+  }
+}
